@@ -56,6 +56,7 @@ h3 {
     color: white;
     border-radius: 5px;
     cursor: pointer;
+    left: -9999px;
 }
 
 #fileName {
@@ -65,6 +66,11 @@ h3 {
 }
 
 .hidden {
+    position: absolute;
+    left: -9999px; /* Lo mantiene fuera de la pantalla */
+}
+
+.hidden2 { 
     position: absolute;
     left: -9999px; /* Lo mantiene fuera de la pantalla */
 }
@@ -136,6 +142,15 @@ hr {
 .imgGuardar {
     margin-left: 10px;
     width: 20px;
+}
+
+.BotonDescargar {
+    padding: 10px 20px;
+    background-color: #004080;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    left: -9999px;
 }
 
 /* Ajustes adicionales para tamaños de pantalla pequeña */

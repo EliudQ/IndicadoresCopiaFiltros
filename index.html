@@ -3,33 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indicadores TICS</title>
     <link rel="stylesheet" href="estilos/estilos.css">
+    <title>Indicadores TICS</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
 </head>
 <body>
     <div class="nav">
-        +57 (8) 261 0014    servicio.alcliente@ganagana.com.co
+        +57 (8) 261 0014 servicio.alcliente@ganagana.com.co
     </div>
     <div class="imagenes">
         <img src="imagenes/logo2.png" title="GanaGana" class="logo2">
         <img src="imagenes/logo3.png" title="Tics" class="logo3">
     </div>
-    <h1>INDICADORES </h1> <br><h2> TICS</h2> 
+    <h1>INDICADORES </h1><br><h2> TICS</h2>
     <div class="container">
-        <h3>Sube tu archivo CSV</h3>
         <form>
-            <div class="custom-file-input">
-                <label for="fileInput" class="file-label">Seleccionar archivo CSV</label>
-                <span id="fileName">No se ha seleccionado un archivo</span>
-                <input type="file" id="fileInput" accept=".csv" class="hidden">
-            </div>
-            <br>
-            <a href="tec_adm.html">
-                <button type="button" id="startButton" class="btn">Empezar</button>
-            </a>
+            <label for="fileInput" class="file-label">Seleccionar archivo CSV</label>
+            <span id="fileName">No se ha selecciona un archivo CSV</span>
+            <input type="file" id="fileInput" accept=".csv" title="Selecciona un archivo CSV" class="hidden2">
+            <br><br><hr>
+            <button id="startButton" title="Iniciar" hidden ></button>
         </form>
+        <select name="tecnico" id="tecnico" class="tecnico" title="Selecciona Técnico">
+            <option selected disabled>TECNICO</option>
+            <optgroup label="Zona Norte" class="letraselect">
+                <option value="963">Cristian David Garcia Quintero</option>
+                <option value="1038">Juan Daniel Barrios</option>
+            </optgroup>
+            <optgroup label="Zona Centro" class="letraselect">
+                <option value="1235">Byron Stiven Ruiz Trujillo</option>
+                <option value="1166">Fabian Andres Ferro Aguilar</option>
+                <option value="1033">Jhon Alexander Jimenez Reinoso</option>
+                <option value="1144">Kevin Alejandro Viñez Gonzalez</option>
+                <option value="1187">Nelson Montes</option>
+                <option value="950">Yennifer Hernandez</option>
+            </optgroup>
+            <optgroup label="Zona Sur" class="letraselect">
+                <option value="1351">Andres Fabian Mateus Mendez</option>
+                <option value="1161">Andres Felipe Vega Sepulveda</option>
+                <option value="1167">Harold Ortiz</option>
+                <option value="1171">Mario Reyes</option>
+            </optgroup>
+        </select>
+
+        <select name="admin" id="admin" class="admin" title="Selecciona Administrador">
+            <option selected disabled>ADMIN</option>
+            <optgroup label="Administradores" class="letraselect">
+                <option value="1128">Andres Felipe Uribe Rodriguez</option>
+                <option value="1064">Genaro Campuzano</option>
+                <option value="1159">Johann Duarte</option>
+                <option value="1140">Lina Garcia</option>
+                <option value="952">Yesi Alexander Rios Ceballos</option>
+            </optgroup>
+        </select><br><br>
+        <button id="downloadAllButton" class="BotonDescargar">Descargar casos TICS</button>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
-    <script src="script/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
