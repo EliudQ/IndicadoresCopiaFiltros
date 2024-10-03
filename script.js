@@ -1,21 +1,21 @@
 // Manejo del archivo CSV
-const fileInput = document.getElementById('fileInput');
-const startButton = document.getElementById('startButton');
-const fileNameDisplay = document.getElementById('fileName');
-const tecnicoSelect = document.getElementById('tecnico');
+const fileInput = document.getElementById('fileInput'); // Seleccion del archivo CSV 
+const startButton = document.getElementById('startButton') // Boton al seleccionar archivo CSV
+const fileNameDisplay = document.getElementById('fileName'); //  No selecciona archivo CSV
+const tecnicoSelect = document.getElementById('tecnico'); // Seleccion de tecnico
 const adminSelect = document.getElementById('admin'); // Selección de administradores
 
-// Conjuntos de códigos permitidos y asignación de zonas
+// Conjuntos de códigos permitidos y   asignacion de zonas que no pueden ser duplicados
 const allowedCodes = new Set([1166, 1235, 1144, 950, 1187, 1033, 1161, 1351, 1167, 1171, 963, 1038, 1128, 1140, 1159, 952, 1064]);
 const zoneMapping = {
     'NORTE': new Set([963, 1038]),
-    'CENTRO': new Set([1235, 1166, 1033, 1144, 1187, 950]),
+    'CENTRO': new Set([1235, 1166, 1033, 1144, 1187, 950]), 
     'SUR': new Set([1351, 1161, 1167, 1171]),
     'ADMIN': new Set([1128, 1140, 1159, 952, 1064])
 };
 
 // Actualización del nombre del archivo cuando se selecciona
-fileInput.addEventListener('change', function(event) {
+fileInput.addEventListener('change', function(event) { // Escuchador de evento
     const fileName = event.target.files.length > 0 ? event.target.files[0].name : 'No se ha seleccionado un archivo CSV';
     fileNameDisplay.innerText = fileName;
 });
@@ -29,7 +29,7 @@ startButton.addEventListener('click', function() {
     }
 });
 
-// Función para convertir "X días Y horas Z minutos" a horas totales
+// Función para convertir días, horas y minutos a horas totales
 function convertirATotalHoras(tiempoSolucion) {
     if (!tiempoSolucion) return 0; // Si no hay tiempo de solución, retorna 0
 
@@ -40,7 +40,7 @@ function convertirATotalHoras(tiempoSolucion) {
         const dias = parseInt(match[1]) || 0;
         const horas = parseInt(match[2]) || 0;
         const minutos = parseInt(match[3]) || 0;
-        return dias * 24 + horas + (minutos / 60); // Total en horas
+        return dias * 24 + horas + (minutos / 60); // Total en horas 24
     }
 
     // Si no coincide con el formato, intenta solo con horas
@@ -49,7 +49,7 @@ function convertirATotalHoras(tiempoSolucion) {
     if (matchHoras) {
         const horas = parseInt(matchHoras[1]) || 0;
         const minutos = parseInt(matchHoras[2]) || 0;
-        return horas + (minutos / 60); // Total en horas
+        return horas + (minutos / 60); // Total en horas 3
     }
 
     // O simplemente devolver 0 si no hay coincidencia
@@ -231,17 +231,3 @@ function processAndDownloadAll(file) {
         }
     });
 }
-
-// Agrega un manejador para el nuevo botón
-const downloadSpecificTimeButton = document.getElementById('downloadSpecificTimeButton');
-
-downloadSpecificTimeButton.addEventListener('click', function() {
-    if (fileInput.files.length > 0) {
-        const file = fileInput.files[0];
-        // Procesa y descarga el archivo filtrado por tiempo específico
-        processAndDownloadSpecificTime(file);
-    } else {
-        alert('Por favor, selecciona un archivo CSV antes de descargar.');
-    }
-});
-
