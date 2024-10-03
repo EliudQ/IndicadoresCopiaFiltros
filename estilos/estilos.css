@@ -5,9 +5,16 @@ body {
     align-items: center; /* Controla la alineación de todos los elementos en el eje transversal */
 }
 .nav{
-    background: #ffe900; /* Color de fondo */
+    background: #ffe203; /* Color de fondo */
     padding:  20px 3%; /* El primer valor determina el relleno superior e inferior mientras que el segundo valor establece el relleno derecho e izquierdo */
     text-align: right; /* Alinea el texto al lado derecho */
+}
+
+.nav2{
+    background: #0e437d; /* Color de fondo */
+    padding:  25px 3%; /* El primer valor determina el relleno superior e inferior mientras que el segundo valor establece el relleno derecho e izquierdo */
+    text-align: right; /* Alinea el texto al lado derecho */
+    margin-top: 10px;
 }
 
 h1 {
@@ -24,7 +31,7 @@ h2 {
 
 .container {
     background-color: #fff;
-    padding: 50px 3%;
+    padding: 40px 3%;
     border-radius: 10px;
     box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -52,11 +59,12 @@ h3 {
 
 .file-label {
     padding: 10px 20px;
-    background-color: #ffe900;
+    background-color: #0e437d;
     color: white;
-    border-radius: 5px;
     cursor: pointer;
     left: -9999px;
+    border-radius: 5px;
+    box-shadow: 4px 4px  #a8aeb8;
 }
 
 #fileName {
@@ -74,40 +82,6 @@ h3 {
     position: absolute;
     left: -9999px; /* Lo mantiene fuera de la pantalla */
 }
-
-.btn {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #0e437d;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.btnvolver {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #0e437d;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.btnenviar {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #0e437d;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
 .tecnico {
     width: 20%;
     background-color: #f4f4f9;
@@ -146,11 +120,12 @@ hr {
 
 .BotonDescargar {
     padding: 10px 20px;
-    background-color: #004080;
-    color: white;
+    background-color: #ffe900;
     border-radius: 5px;
     cursor: pointer;
-    left: -9999px;
+    font-size: 16px;
+    border: none;
+    box-shadow: 4px 4px  #a8aeb8;
 }
 
 /* Ajustes adicionales para tamaños de pantalla pequeña */
