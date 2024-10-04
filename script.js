@@ -14,14 +14,14 @@ const zoneMapping = {
     'ADMIN': new Set([1128, 1140, 1159, 952, 1064])
 };
 
-// Actualización del nombre del archivo cuando se selecciona
-fileInput.addEventListener('change', function(event) { // Escuchador de evento
+// Actualizacion del nombre del archivo cuando se selecciona
+fileInput.addEventListener('change', function(event) { // Escuchador de evento para change
     const fileName = event.target.files.length > 0 ? event.target.files[0].name : 'No se ha seleccionado un archivo CSV';
     fileNameDisplay.innerText = fileName;
 });
 
 // Manejo del botón 'Iniciar'
-startButton.addEventListener('click', function() {
+startButton.addEventListener('click', function() { // Escuchador de evento para click
     if (fileInput.files.length > 0) {
         localStorage.setItem('uploadedFileName', fileInput.files[0].name);
     } else {
