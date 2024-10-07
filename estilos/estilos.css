@@ -6,14 +6,12 @@ body {
 }
 .nav{
     background: #ffe203; /* Color de fondo */
-    padding:  20px 3%; /* El primer valor determina el relleno superior e inferior mientras que el segundo valor establece el relleno derecho e izquierdo */
-    text-align: right; /* Alinea el texto al lado derecho */
+    padding:  25px 3%; /* El primer valor determina el relleno superior e inferior mientras que el segundo valor establece el relleno derecho e izquierdo */
 }
 
 .nav2{
     background: #0e437d; /* Color de fondo */
     padding:  25px 3%; /* El primer valor determina el relleno superior e inferior mientras que el segundo valor establece el relleno derecho e izquierdo */
-    text-align: right; /* Alinea el texto al lado derecho */
     margin-top: 10px;
 }
 
