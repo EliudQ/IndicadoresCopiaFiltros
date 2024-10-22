@@ -159,7 +159,7 @@ function processAndDownload(file, selectedCode, type) {
             const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
             const link = document.createElement('a');
             link.href = URL.createObjectURL(blob);
-            link.download = `Archivo_Filtrado_${selectedName}.csv`;
+            link.download = `Archivo Filtrado ${selectedName}.csv`;
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
@@ -191,7 +191,7 @@ adminSelect.addEventListener('change', function() {
     }
 });
 
-// Agregar el manejador para el botón de descarga
+// Agregar el manejador para el botón de descarga GENERAL
 document.getElementById('downloadAllButton').addEventListener('click', function() {
     if (fileInput.files.length > 0) {
         const file = fileInput.files[0];
@@ -242,9 +242,9 @@ function processAndDownloadAll(file) {
                     }
                 }
 
-                // Convertir tiempo de solución a horas
-                const totalHoras = convertirATotalHoras(tiempoSolucion);
-                row['TotalHoras'] = totalHoras; // Añadimos totalHoras al row
+            // Convertir tiempo de solución a horas
+            const totalHoras = convertirATotalHoras(tiempoSolucion);
+            row['TotalHoras'] = totalHoras; // Añadimos totalHoras al row
 
             // Determinar si excede el tiempo
             if (row['Zona'] === 'CENTRO' && totalHoras > 3) {
