@@ -159,7 +159,7 @@ function processAndDownload(file, selectedCode, type) {
             const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
             const link = document.createElement('a');
             link.href = URL.createObjectURL(blob);
-            link.download = `Archivo Filtrado ${selectedName}.csv`;
+            link.download = `Casos TICS ${selectedName}.csv`;
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
@@ -275,7 +275,7 @@ function processAndDownloadAll(file) {
             const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
             const link = document.createElement('a');
             link.href = URL.createObjectURL(blob);
-            link.download = 'Casos_Tics.csv';
+            link.download = 'Casos Tics.csv';
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
